@@ -2,6 +2,7 @@ const { database } = require("./database.js")
 
 const hireDrovers = (herdSize) => {
     const drovers = []
+    const cattleToDrive = 50
     const allDrovers = database.drovers
     const numberNeeded = cattleToDrive / 10
 
@@ -10,6 +11,9 @@ const hireDrovers = (herdSize) => {
         drovers.push(allDrovers[randomHerderId])
     }
 
+    return drovers
+
 }
+
 
 module.exports = { hireDrovers }
